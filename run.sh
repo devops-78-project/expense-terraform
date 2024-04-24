@@ -12,4 +12,4 @@ fi
 
 rm -rf .terraform/terraform.tfvars
 terraform init -backend-config=env-$env/state.tfvars
-terraform $action var-file=env-$env/main.tfvars -auto-approve
+terraform $action -var-file=env-$env/main.tfvars -auto-approve
